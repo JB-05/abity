@@ -1,90 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
     margin: 0%;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 
-    background:url("./assets/abity\ website\ login\ page.3.svg");
+    background: url("./assets/abity\ website\ login\ page.3.svg");
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 9vh;
     background-color: #fafaf2;
 }
 
-.navbar nav h2{
+.navbar nav h2 {
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
     margin: 15px;
     font-weight: 500;
     color: blue;
 }
+
 .navbar nav a {
     text-decoration: none;
 }
 
-.selection_body{
+.selection_body {
     margin: 2rem;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 0.7fr 1.3fr;
     width: 90%;
     height: 70vh;
 }
 
-.right .right_grid_row{
-    display: grid;
-    grid-template-rows: 0.8fr 0,5fr;
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
 }
 
-.right .right_grid_row .right_grid_col{
-    display: grid;
+.right_grid_row {
+    display: flex;
+    grid-template-rows: 0.8fr 0, 5fr;
+}
+
+.right_grid_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1.5fr 1.7fr;
     margin-top: 5rem;
     width: auto;
     aspect-ratio: 1;
 }
 
-.right_grid_col_studentLogin{
+.right_grid_col_studentLogin {
     width: 15rem;
     aspect-ratio: 1.7;
-    border: 2px rgba(128, 128, 128, 0.377) solid ;
+    border: 2px rgba(128, 128, 128, 0.377) solid;
     padding: 23px;
+    margin: auto;
+    margin-bottom: 20px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.right_grid_col_studentLogin p{
+
+.right_grid_col_studentLogin p {
     display: flex;
     justify-content: center;
     padding-top: 25px;
     font-size: 23px;
     align-content: center;
     color: #6b6b6b;
+    text-align: center;
 }
 
-.right_grid_col_clientLogin{
+.right_grid_col_clientLogin {
     width: 15rem;
     aspect-ratio: 1.7;
-    border: 2px rgba(128, 128, 128, 0.377) solid ;
+    border: 2px rgba(128, 128, 128, 0.377) solid;
     padding: 30px;
+    margin: auto;
     border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.right_grid_col_clientLogin p{
+
+.right_grid_col_clientLogin p {
     display: flex;
     justify-content: center;
     padding-top: 25px;
     font-size: 23px;
     align-content: center;
     color: #6b6b6b;
+    text-align: center;
 }
 
-.right_grid_col_clientLogin label{
+.right_grid_col_clientLogin label {
     align-items: center;
     justify-content: center;
+}
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+    .selection_body {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right_grid_row {
+        flex-direction: column;
+    }
+
+    .right_grid_col {
+        width: 100%;
+    }
+
+    .right_grid_col_studentLogin,
+    .right_grid_col_clientLogin {
+        margin-bottom: 20px;
+    }
+}
+
+/* For tablets */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .selection_body {
+        flex-direction: row;
+    }
+
+    .left,
+    .right {
+        width: 50%;
+    }
+
+    .right_grid_row {
+        flex-direction: row;
+    }
+
+    .right_grid_col {
+        width: 50%;
+    }
+}
+
+/* For desktops */
+@media only screen and (min-width: 993px) {
+    .selection_body {
+        flex-direction: row;
+    }
+
+    .left,
+    .right {
+        width: 50%;
+    }
+
+    .right_grid_row {
+        flex-direction: row;
+    }
+
+    .right_grid_col {
+        width: 50%;
+    }
 }
